@@ -1,0 +1,27 @@
+<!-- Works-->
+<div class="content">
+    <ng-container>
+        <!-- <p>ok</p> -->
+        <div class="header">
+            <h1>Your Favorites</h1>
+          </div>
+        <div class="card-container" *ngIf="isFavorited">
+            <div class="card product-card">
+              <img src="assets/images/batman.jpg" alt="Icon">
+                <div class="product-card-inner">
+                       <!--Heart-->
+          <div class="icon"><app-favorite-button (click)="toggleIsFavorited()"></app-favorite-button></div>
+          
+          <p>Batman</p>
+          <!-- Download Button-->
+          <a href="assets/images/batman.jpg" download>
+            <br>
+          <img src="assets/images/download-button.png" alt="" class="download-icon" width="30px">
+        </a>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    
+
+  </div>

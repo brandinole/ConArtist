@@ -1,0 +1,73 @@
+/*works*/
+
+.product-card {
+    padding: 40px;
+    height: auto;
+    width: 300px;
+    border: 2px solid black;
+}
+    input {
+        font-family: Helvetica, sans-serif;
+        border: none;
+        margin: 3px;
+    }
+    hr {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-family:  Helvetica, sans-serif;
+    }
+    mat-label {
+        font-family:  Helvetica, sans-serif;
+        font-size: small;
+    }
+    hover{
+        transition: 400ms;
+       transform: translateY(5px);
+       box-shadow: 0 5px;
+       color:aqua;
+   }
+   active{
+       transition: 100ms;
+       transform: translateY(10px);
+       box-shadow: 0 0px;
+       color: blueviolet;
+   }
+
+
+img {
+    height: 200px;
+}
+
+.product-card-inner {
+    height: 100%;
+}
+p {
+    font-family:  Helvetica, sans-serif;
+    }
+
+.content {
+  padding: 25px;
+}
+
+
+.icon {
+    color: white;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    top: -10px;
+  }
+
+.download-icon {
+    height: 30px;
+}
+
+.product-card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    cursor: pointer;
+}

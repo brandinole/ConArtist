@@ -1,0 +1,70 @@
+<!-- This is the registration form/modal -->
+<div *ngIf="!isConfirmed">
+  <h2 mat-dialog-title>Sign Up</h2>
+  <hr>
+  <mat-dialog-content class="mat-typography">
+      <form #signupForm="ngForm">
+        
+          <div class="col">
+            <label for="fname">First Name:&nbsp;</label><br>
+            <input type="text" name="fname" id="fname" #fnameInput="ngModel" [(ngModel)]="fname">
+          </div>
+          <div class="col">
+            <label for="lname">Last Name:&nbsp;</label><br>
+            <input type="text" name="lname" id="lname" #lnameInput="ngModel" [(ngModel)]="lname">
+          </div>
+        
+        <br>
+        
+          <div class="col">
+            <label for="email">Email:&nbsp;</label><br>
+            <input type="text" name="email" id="email" #emailInput="ngModel" [(ngModel)]="email">
+          </div>
+          <div class="col">
+            <label for="username">Username:&nbsp;</label><br>
+            <input type="text" name="username" id="username" #usernameInput="ngModel" [(ngModel)]="username">    
+          </div>
+       
+        <br>
+        
+      
+          <div class="col">
+            <label for="password">New Password:&nbsp;</label><br>
+            <input matTooltip="  Password Requirements: 
+              &#xD;&#xA;&#x2022; Password must contain at least 1 uppercase and lowercase letter
+              &#xD;&#xA;&#x2022; Password must contain at least 1 special character 
+              &#xD;&#xA;&#x2022; Password must contain a number
+              &#xD;&#xA;&#x2022; Minimum of 8 characters" 
+              matTooltipClass="multiline-tooltip" matTooltipPosition="before" type="password" 
+              name="password" id="password" #passwordInput="ngModel" [(ngModel)]="password">
+          </div>
+          <div class="col">
+            <label for="confirmPassword">Confirm Password:&nbsp;</label><br>
+            <input matTooltip="  Make sure your passwords match " 
+            matTooltipClass="multiline-tooltip" matTooltipPosition="before"
+            type="password" name="confirmPassword" id="confirmPassword" #confirmPasswordInput="ngModel" [(ngModel)]="confirmPassword">
+          </div>
+       
+      </form>
+  </mat-dialog-content>
+  <br>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog cdkFocusInitial (click)="onSignUp(signupForm)">Confirm</button>
+  </mat-dialog-actions>
+</div>
+
+<!--Code Verification after login-->
+<div *ngIf="isConfirmed">
+  <h2 mat-dialog-title>Verify</h2>
+  <hr>
+  <mat-dialog-content class="mat-typography">
+    <form #verifyForm="ngForm">
+      <label>Code:&nbsp;</label>
+      <input type="text" name="code" id="code" #codeInput="ngModel" [(ngModel)]="code"><br><br>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-button mat-dialog cdkFocusInitial (click)="onVerify(verifyForm)">Verify</button>
+</mat-dialog-actions>
+</div>

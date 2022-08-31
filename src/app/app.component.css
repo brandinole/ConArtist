@@ -1,0 +1,13 @@
+.brand {
+    height: 3.5rem;
+    width: 4rem;
+}
+
+.nav-margin-logo {
+    margin-left: 1rem;
+    margin-right: .5rem;
+}
+
+.nav-margin-sides {
+    padding-right: 3rem;
+}

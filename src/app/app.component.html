@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between" role="banner">
+  <a class="navbar-brand" href=""><img class="brand nav-margin-logo" src="assets/images/villain.png" alt="Logo"><span class="logo-text">Con Artist</span></a>
+
+  <a>
+    <div class="collapse navbar-collapse justify-content-end">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item nav-margin-sides">
+            <a class="nav-link nav-margin-sides" routerLink="" routerLinkActive="active">Home</a>
+          </li>
+          <li class="nav-item nav-margin-sides">
+            <a class="nav-link nav-margin-sides" routerLink="/favorites" routerLinkActive="active">Favorites</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Categories Dropdown menu -->
+      <div>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle btn-sm" style="margin-right: 1rem; color: white; padding: 0; border: none; background: none;" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <a class="dropdown-item" type="button" routerLink="">Sports</a>
+            <a class="dropdown-item" type="button">Gaming</a>
+            <a class="dropdown-item" type="button">Nature</a>
+            <a class="dropdown-item" type="button">Animals</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Register Now! if not a user -->
+      <div *ngIf="!cognitoUser">
+        <button class="btn btn-sm bg-light" (click)="openSignupModal()" style="margin-right: 1rem;">Sign Up</button>
+        <button class="btn btn-sm bg-light" (click)="openLoginModal()" style="margin-right: 1rem;">Log In</button>
+      </div>
+      <!-- User logged in dropdown -->
+      <div *ngIf="cognitoUser">
+        <div class="dropdown">
+          <button class="btn btn-success dropdown-toggle btn-sm" style="margin-right: 1rem;" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{cognitoUser.getUsername()}}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <a class="dropdown-item" (click)="onLogout()" type="button">Sign Out</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </a>
+</nav>
+
+<router-outlet></router-outlet>
+
+
+
