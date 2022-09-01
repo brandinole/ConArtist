@@ -13,6 +13,7 @@ import { CognitoUser, CognitoUserPool } from 'amazon-cognito-identity-js';
 export class AppComponent {
   title = '959035_ConArtist';
   cognitoUser: CognitoUser | null;
+ 
 
   constructor(private dialogRef: MatDialog) {
     // checks if a user is signed in or not
@@ -46,6 +47,5 @@ export class AppComponent {
     cognitoUser?.signOut();
     window.location.reload();
   }
-
   
 }

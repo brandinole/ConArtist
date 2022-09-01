@@ -9,6 +9,7 @@ import { Input, Output, EventEmitter } from '@angular/core';
 export class FavoriteButtonComponent implements OnInit {
   @Input() selected: boolean | undefined;
   @Output() selectedChange = new EventEmitter<boolean>();
+  favsList = [];
   
   constructor() { }
 
@@ -18,6 +19,9 @@ export class FavoriteButtonComponent implements OnInit {
     this.selected = !this.selected;
     this.selectedChange.emit(this.selected);
     console.log(this.selected);
-  }
+    this.favsList.push
 
-}
+
+
+  
+}}

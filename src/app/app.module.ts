@@ -23,7 +23,7 @@ import { FavoriteButtonComponent } from './favorite-button/favorite-button.compo
     LoginModalComponent,
     SignupModalComponent,
     ForgotPasswordComponent,
-    FavoriteButtonComponent
+    FavoriteButtonComponent,
   ],
   imports: [
     FormsModule,

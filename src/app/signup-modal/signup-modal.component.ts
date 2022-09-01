@@ -41,7 +41,7 @@ confirmPassword: string = '';
 
   }
 
-  //checks form to enhance UX
+  //check form 
   formCheck(form: NgForm): boolean {
     let missing: string[] = [];
     if(form.value.fname == '') {
@@ -67,7 +67,7 @@ confirmPassword: string = '';
     }
 
     if(this.confirmPassword != this.password) {
-      alert("Make sure the passwords match!");
+      alert("Make sure both passwords match");
       return false;
     }
     return true;
@@ -142,6 +142,6 @@ confirmPassword: string = '';
         return;
       }
     });
-    alert("Congratulations! You are signed up!");
+    alert("You're signed up!");
   } 
 }

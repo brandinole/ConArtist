@@ -133,3 +133,10 @@ input {
   right: 30px;
   top: -10px;
 }
+
+.hero-text {
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
