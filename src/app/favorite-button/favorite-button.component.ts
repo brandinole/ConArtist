@@ -20,8 +20,4 @@ export class FavoriteButtonComponent implements OnInit {
     this.selectedChange.emit(this.selected);
     console.log(this.selected);
     this.favsList.push
-
-
-
-  
 }}
